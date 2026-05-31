@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">&#9670;</span>
+        <span class="logo-text">CivicPulse</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-hamburger">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="banner">
+    <div class="banner-bg"></div>
+    <div class="banner-content">
+      <p class="banner-tag">&#127774; Chennai, Tamil Nadu</p>
+      <h1 class="banner-title">Where Your <em>Community</em> Comes Alive</h1>
+      <p class="banner-sub">Discover curated local events, connect with neighbours, and be part of something bigger than yourself.</p>
+      <div class="banner-highlight">
+        <span class="highlight-badge">&#127881; Limited Offer</span>
+        <p>Register before June 15 and get <strong>FREE access</strong> to all premium workshops this season — worth ₹1,200.</p>
+      </div>
+      <div class="banner-actions">
+        <a href="#events" class="btn btn-primary">Explore Events</a>
+        <a href="#register" class="btn btn-outline">Join Now</a>
+      </div>
+    </div>
+    <div class="banner-stats">
+      <div class="stat"><strong>240+</strong><span>Events Hosted</span></div>
+      <div class="stat"><strong>18K</strong><span>Members</span></div>
+      <div class="stat"><strong>32</strong><span>Neighbourhoods</span></div>
+    </div>
+  </section>
+
+  <section id="events" class="section events-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Upcoming</p>
+        <h2 class="section-title">Events Near You</h2>
+      </div>
+      <div class="events-grid">
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+            <span class="event-type">Culture</span>
+          </div>
+          <div class="event-card-body">
+            <h3>Marina Heritage Walk</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> June 22, 2026 &mdash; 6:30 AM</li>
+              <li><span class="meta-icon">&#128205;</span> Marina Beach Promenade</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-ok">42 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #10b981, #059669);">
+            <span class="event-type">Wellness</span>
+          </div>
+          <div class="event-card-body">
+            <h3>Sunrise Yoga in the Park</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> June 28, 2026 &mdash; 5:45 AM</li>
+              <li><span class="meta-icon">&#128205;</span> Nandanam Park, Adyar</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-ok">18 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9);">
+            <span class="event-type">Tech</span>
+          </div>
+          <div class="event-card-body">
+            <h3>AI for Everyone Workshop</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> July 5, 2026 &mdash; 10:00 AM</li>
+              <li><span class="meta-icon">&#128205;</span> TIDEL Park, OMR</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-warn">7 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+            <span class="event-type">Food</span>
+          </div>
+          <div class="event-card-body">
+            <h3>South Indian Food Carnival</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> July 12, 2026 &mdash; 11:00 AM</li>
+              <li><span class="meta-icon">&#128205;</span> Express Avenue Mall</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-ok">85 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #0ea5e9, #0284c7);">
+            <span class="event-type">Music</span>
+          </div>
+          <div class="event-card-body">
+            <h3>Carnatic Fusion Night</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> July 19, 2026 &mdash; 7:00 PM</li>
+              <li><span class="meta-icon">&#128205;</span> Music Academy, TTK Road</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-warn">11 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+        <article class="event-card">
+          <div class="event-card-top" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+            <span class="event-type">Art</span>
+          </div>
+          <div class="event-card-body">
+            <h3>Street Art & Mural Fest</h3>
+            <ul class="event-meta">
+              <li><span class="meta-icon">&#128197;</span> July 26, 2026 &mdash; 9:00 AM</li>
+              <li><span class="meta-icon">&#128205;</span> Mylapore Tank, Chennai</li>
+              <li><span class="meta-icon">&#128101;</span> <strong class="seats-ok">60 seats left</strong></li>
+            </ul>
+            <a href="#register" class="btn btn-sm">Reserve Seat</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Highlights</p>
+        <h2 class="section-title">Event Gallery</h2>
+      </div>
+      <div class="table-wrapper">
+        <table class="gallery-table">
+          <tbody>
+            <tr>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=260&fit=crop" alt="Community Festival" />
+                  <figcaption>Community Festival 2025</figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=260&fit=crop" alt="Outdoor Yoga Session" />
+                  <figcaption>Sunrise Yoga Session</figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=400&h=260&fit=crop" alt="Tech Workshop" />
+                  <figcaption>Tech Innovation Workshop</figcaption>
+                </figure>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=260&fit=crop" alt="Food Carnival" />
+                  <figcaption>South Indian Food Carnival</figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=400&h=260&fit=crop" alt="Music Night" />
+                  <figcaption>Carnatic Fusion Night</figcaption>
+                </figure>
+              </td>
+              <td>
+                <figure class="gallery-fig">
+                  <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=260&fit=crop" alt="Street Art Festival" />
+                  <figcaption>Street Art & Mural Fest</figcaption>
+                </figure>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="register" class="section register-section">
+    <div class="container register-layout">
+      <div class="register-info">
+        <div class="section-head left">
+          <p class="section-tag">Join Us</p>
+          <h2 class="section-title">Event Registration</h2>
+        </div>
+
+        <div class="info-block">
+          <h3>&#128176; Event Fees</h3>
+          <table class="info-table">
+            <thead>
+              <tr><th>Category</th><th>Fee</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Cultural Events</td><td>Free</td></tr>
+              <tr><td>Wellness Sessions</td><td>₹150</td></tr>
+              <tr><td>Tech Workshops</td><td>₹499</td></tr>
+              <tr><td>Food Carnivals</td><td>₹299</td></tr>
+              <tr><td>Music & Arts</td><td>₹200</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="info-block">
+          <h3>&#128197; Event Schedule</h3>
+          <ul class="schedule-list">
+            <li><span>Morning Events</span> 5:30 AM – 9:00 AM</li>
+            <li><span>Afternoon Sessions</span> 10:00 AM – 1:00 PM</li>
+            <li><span>Evening Events</span> 5:00 PM – 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="register-form-wrap">
+        <form class="register-form" onsubmit="return false;">
+          <div class="form-group">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fname" placeholder="e.g. Priya Krishnan" required autofocus />
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address</label>
+            <input type="email" id="femail" name="femail" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="fdate">Preferred Event Date</label>
+            <input type="date" id="fdate" name="fdate" required />
+          </div>
+          <div class="form-group">
+            <label for="ftype">Event Type</label>
+            <select id="ftype" name="ftype" required>
+              <option value="" disabled selected>Select an event type</option>
+              <option value="cultural">Cultural</option>
+              <option value="wellness">Wellness</option>
+              <option value="tech">Tech Workshop</option>
+              <option value="food">Food Carnival</option>
+              <option value="music">Music & Arts</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="fmsg">Message</label>
+            <textarea id="fmsg" name="fmsg" rows="4" placeholder="Tell us anything you'd like us to know…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Submit Registration</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section video-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Watch</p>
+        <h2 class="section-title">Event Promo Video</h2>
+      </div>
+      <div class="video-wrap">
+        <video controls poster="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=900&h=500&fit=crop">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="section preferences-section">
+    <div class="container pref-layout">
+      <div class="section-head left">
+        <p class="section-tag">Personalise</p>
+        <h2 class="section-title">Your Preferences</h2>
+      </div>
+      <div class="pref-card">
+        <p class="pref-label">Select your favourite event type and we'll notify you first:</p>
+        <div class="pref-options">
+          <label class="pref-radio"><input type="radio" name="pref" value="cultural" /> Cultural</label>
+          <label class="pref-radio"><input type="radio" name="pref" value="wellness" /> Wellness</label>
+          <label class="pref-radio"><input type="radio" name="pref" value="tech" /> Tech</label>
+          <label class="pref-radio"><input type="radio" name="pref" value="food" /> Food</label>
+          <label class="pref-radio"><input type="radio" name="pref" value="music" /> Music</label>
+        </div>
+        <div class="pref-actions">
+          <button class="btn btn-primary" onclick="savePreference()">&#128190; Save Preference</button>
+          <button class="btn btn-outline" onclick="clearPreference()">&#10005; Clear Preference</button>
+        </div>
+        <p class="pref-status" id="pref-status"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section geo-section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Discover</p>
+        <h2 class="section-title">Events Near You</h2>
+      </div>
+      <div class="geo-card">
+        <p>Allow location access to find community events happening close to you right now.</p>
+        <button class="btn btn-primary" onclick="findLocation()">&#128205; Find Nearby Events</button>
+        <div class="geo-result" id="geo-result"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="container contact-layout">
+      <div class="section-head left">
+        <p class="section-tag">Reach Us</p>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="contact-cards">
+        <div class="contact-item">
+          <div class="contact-icon">&#127968;</div>
+          <h4>Address</h4>
+          <p>No. 14, 2nd Cross Street<br />Adyar, Chennai — 600 020<br />Tamil Nadu, India</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128222;</div>
+          <h4>Phone</h4>
+          <p>+91 98400 00000<br />+91 44 2345 6789</p>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">&#128140;</div>
+          <h4>Email</h4>
+          <p><a href="mailto:sjragul555@gmail.com">sjragul555@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">&#9670;</span>
+        <span class="logo-text">CivicPulse</span>
+      </div>
+      <p class="footer-credit">Developed by <strong>Ragul SJ</strong> &mdash; <a href="mailto:sjragul555@gmail.com">sjragul555@gmail.com</a></p>
+      <p class="footer-copy">&copy; 2026 CivicPulse &mdash; Local Community Event Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function savePreference() {
+      const sel = document.querySelector('input[name="pref"]:checked');
+      const status = document.getElementById('pref-status');
+      if (sel) {
+        localStorage.setItem('eventPref', sel.value);
+        status.textContent = '✔ Preference saved: ' + sel.value.charAt(0).toUpperCase() + sel.value.slice(1);
+        status.style.color = '#10b981';
+      } else {
+        status.textContent = 'Please select an event type first.';
+        status.style.color = '#ef4444';
+      }
+    }
+
+    function clearPreference() {
+      localStorage.removeItem('eventPref');
+      document.querySelectorAll('input[name="pref"]').forEach(r => r.checked = false);
+      const status = document.getElementById('pref-status');
+      status.textContent = 'Preferences cleared.';
+      status.style.color = '#6b7280';
+    }
+
+    function findLocation() {
+      const result = document.getElementById('geo-result');
+      if (!navigator.geolocation) {
+        result.innerHTML = '<span class="geo-error">Geolocation is not supported by your browser.</span>';
+        return;
+      }
+      result.innerHTML = '<span class="geo-loading">&#128205; Locating you…</span>';
+      navigator.geolocation.getCurrentPosition(
+        pos => {
+          result.innerHTML = '<span class="geo-success">&#10003; Location found: <strong>' + pos.coords.latitude.toFixed(4) + '° N, ' + pos.coords.longitude.toFixed(4) + '° E</strong><br />Showing events within 10 km of your location.</span>';
+        },
+        () => {
+          result.innerHTML = '<span class="geo-error">&#9888; Unable to retrieve location. Please allow location access and try again.</span>';
+        }
+      );
+    }
+
+    window.addEventListener('load', () => {
+      const saved = localStorage.getItem('eventPref');
+      if (saved) {
+        const radio = document.querySelector('input[name="pref"][value="' + saved + '"]');
+        if (radio) radio.checked = true;
+      }
+    });
+  </script>
+
+</body>
+</html>
