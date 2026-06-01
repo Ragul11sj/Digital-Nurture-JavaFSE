@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CivicPulse — Community Event Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Literata:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="#f4a261" stroke-width="2"/>
+          <polygon points="16,8 24,13 24,19 16,24 8,19 8,13" fill="#f4a261" opacity="0.3"/>
+        </svg>
+        <span>CivicPulse</span>
+      </div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" />
+      <label for="nav-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="main-nav">
+        <a href="#welcome">Home</a>
+        <a href="#stats-section">Stats</a>
+        <a href="#events-section">Events</a>
+        <a href="#register-section">Register</a>
+        <a href="#footer">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="welcome-section" id="welcome">
+    <div class="welcome-bg"></div>
+    <div class="welcome-content container">
+      <p class="welcome-eyebrow" id="greeting-line">Good morning</p>
+      <h1 class="welcome-title">Your Community,<br /><em>Your Events.</em></h1>
+      <p class="welcome-datetime" id="datetime-display"></p>
+      <p class="welcome-sub">Discover, register, and celebrate local events happening across Chennai — all in one place.</p>
+      <div class="welcome-actions">
+        <a href="#events-section" class="btn btn-primary">Browse Events</a>
+        <button class="btn btn-ghost" id="toggle-stats-btn">View Statistics</button>
+      </div>
+    </div>
+    <div class="scroll-hint">&#8595;</div>
+  </section>
+
+  <section class="stats-section" id="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" id="stat-total-events">
+          <span class="stat-number" id="stat-events-count">—</span>
+          <span class="stat-label">Total Events</span>
+        </div>
+        <div class="stat-card" id="stat-total-reg">
+          <span class="stat-number" id="stat-reg-count">—</span>
+          <span class="stat-label">Registrations</span>
+        </div>
+        <div class="stat-card" id="stat-total-seats">
+          <span class="stat-number" id="stat-seats-count">—</span>
+          <span class="stat-label">Seats Available</span>
+        </div>
+        <div class="stat-card stat-card--wide" id="stat-popular">
+          <span class="stat-number stat-number--sm" id="stat-popular-name">—</span>
+          <span class="stat-label">Most Popular Event</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="controls-section" id="controls-section">
+    <div class="container">
+      <div class="controls-bar">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="Search events…" />
+          <button class="search-clear" id="search-clear" title="Clear search">&#10005;</button>
+        </div>
+        <div class="filter-wrap">
+          <select id="category-filter" class="filter-select">
+            <option value="All">All Categories</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Technology">Technology</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Food">Food</option>
+            <option value="Music">Music</option>
+          </select>
+        </div>
+        <div class="pref-controls">
+          <button class="btn btn-sm" id="save-pref-btn">Save Filters</button>
+          <button class="btn btn-sm btn-outline" id="clear-pref-btn">Clear Prefs</button>
+        </div>
+      </div>
+      <div class="result-count-bar">
+        <span id="result-count-label"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="events-section" id="events-section">
+    <div class="container">
+      <div id="loading-spinner" class="loading-spinner" style="display:none;">
+        <div class="spinner"></div>
+        <p>Loading events…</p>
+      </div>
+      <div id="events-grid" class="events-grid"></div>
+      <div id="no-results" class="no-results" style="display:none;">
+        <p>&#128269; No events match your search. Try a different keyword or category.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="register-section" id="register-section">
+    <div class="container register-layout">
+      <div class="register-intro">
+        <p class="section-eyebrow">Join Us</p>
+        <h2 class="section-title">Register for an Event</h2>
+        <p class="section-desc">Fill in your details and select an event. We'll confirm your seat within 24 hours.</p>
+        <div id="session-info" class="session-info-box"></div>
+      </div>
+      <form class="register-form" id="register-form" novalidate>
+        <div class="form-group">
+          <label for="f-name">Full Name <span class="req">*</span></label>
+          <input type="text" id="f-name" placeholder="e.g. Priya Krishnan" required />
+          <span class="field-error" id="err-name"></span>
+        </div>
+        <div class="form-group">
+          <label for="f-email">Email Address <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="you@example.com" required />
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="form-group">
+          <label for="f-phone">Phone Number <span class="req">*</span></label>
+          <input type="tel" id="f-phone" placeholder="+91 98400 00000" required />
+          <span class="field-error" id="err-phone"></span>
+        </div>
+        <div class="form-group">
+          <label for="f-event">Select Event <span class="req">*</span></label>
+          <select id="f-event" required>
+            <option value="" disabled selected>Choose an event</option>
+          </select>
+          <span class="field-error" id="err-event"></span>
+        </div>
+        <div id="form-message" class="form-message"></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary full-w" id="submit-btn">Register Now</button>
+          <button type="button" class="btn btn-ghost full-w" id="reset-btn">Reset Form</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <div class="logo">
+          <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="16,2 30,10 30,22 16,30 2,22 2,10" fill="none" stroke="#f4a261" stroke-width="2"/>
+            <polygon points="16,8 24,13 24,19 16,24 8,19 8,13" fill="#f4a261" opacity="0.3"/>
+          </svg>
+          <span>CivicPulse</span>
+        </div>
+        <p>Bringing Chennai's community together, one event at a time.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#welcome">Home</a>
+        <a href="#events-section">Events</a>
+        <a href="#register-section">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Adyar, Chennai — 600 020<br />Tamil Nadu, India</p>
+        <a href="mailto:sjragul555@gmail.com">sjragul555@gmail.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>Developed by <strong>Ragul SJ</strong> &mdash; <a href="mailto:sjragul555@gmail.com">sjragul555@gmail.com</a></p>
+      <p>&copy; 2026 CivicPulse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="toast-container" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
